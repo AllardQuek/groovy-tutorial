@@ -5,9 +5,33 @@ for (def i=1; i <= 5; i++) {
 
 println ""
 
-// for in 
+// for in (works with lists as well)
 for (i in 1..5) {
 	print i
+}
+
+// iterate over a map
+def map = ['abc':1, 'def':2, 'xyz':3]
+x = 0
+for ( e in map ) {
+    x += e.value
+}
+assert x == 6
+
+// iterate over values in a map
+x = 0
+for ( v in map.values() ) {
+    x += v
+}
+assert x == 6
+
+println ""
+
+// while
+int i = 1
+while (i <= 5) {
+	print i
+	i++
 }
 
 println ""
